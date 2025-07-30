@@ -1,0 +1,7 @@
+{
+  "qualification_threshold": 30,
+  "source_weights": {
+    "industry_challenges": 30,
+    "content_marketing": 25
+  }
+}
