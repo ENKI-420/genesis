@@ -1,0 +1,13 @@
+# Immediate Revenue Generation Launcher Dependencies
+# Core Python libraries (included with Python 3.6+)
+# asyncio - for async operations
+# subprocess - for system commands
+# time - for timing operations
+# json - for JSON handling
+# logging - for logging functionality
+# os - for operating system operations
+# sqlite3 - for database operations
+# datetime - for date/time handling
+# typing - for type hints
+
+# No external dependencies required - all libraries are part of Python standard library
