@@ -1,0 +1,42 @@
+{
+  "qualification_threshold": 25,
+  "deal_size_weights": {
+    "high": 30,
+    "medium": 20,
+    "low": 15,
+    "minimal": 10
+  },
+  "source_weights": {
+    "industry_challenges": 25,
+    "content_marketing": 20,
+    "security_consulting": 15,
+    "shift_ai_beta": 10,
+    "referral_program": 30,
+    "cold_outreach": 5,
+    "conference": 15,
+    "social_media": 8
+  },
+  "email_validation": true,
+  "duplicate_detection": true,
+  "auto_nurturing": true,
+  "logging": {
+    "level": "INFO",
+    "file_enabled": true,
+    "console_enabled": true
+  },
+  "database": {
+    "path": "enhanced_enterprise_acquisition.db",
+    "backup_enabled": true,
+    "backup_interval_days": 7
+  },
+  "analytics": {
+    "enabled": true,
+    "report_interval_hours": 24,
+    "retention_days": 90
+  },
+  "lead_generation": {
+    "max_leads_per_source": 10,
+    "min_deal_size": 5000,
+    "max_deal_size": 1000000
+  }
+}

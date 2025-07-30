@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-07-30T19:50:12.576383",
+  "summary": {
+    "total_leads": 3,
+    "qualified_leads": 3,
+    "total_pipeline_value": 1200000.0,
+    "qualification_rate": 100.0,
+    "average_deal_size": 400000.0,
+    "weekly_leads": 3
+  },
+  "source_performance": {
+    "industry_challenges": {
+      "count": 3,
+      "total_value": 1200000.0,
+      "avg_qualification_score": 83.33333333333333,
+      "conversion_rate": 100.0
+    }
+  },
+  "industry_insights": {
+    "AI/ML": {
+      "count": 1,
+      "avg_deal_size": 500000.0
+    },
+    "Blockchain": {
+      "count": 1,
+      "avg_deal_size": 300000.0
+    },
+    "Data Analytics": {
+      "count": 1,
+      "avg_deal_size": 400000.0
+    }
+  },
+  "conversion_funnel": {
+    "qualified": 3
+  },
+  "recommendations": [
+    "\ud83c\udfaf Increase investment in industry_challenges - highest value source",
+    "\ud83d\udcc8 Scale up lead generation efforts across all channels"
+  ]
+}
