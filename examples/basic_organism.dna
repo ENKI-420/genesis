@@ -1,0 +1,19 @@
+# Basic DNA-Lang Organism Example
+# Demonstrates core DNA-Lang syntax
+
+organism BasicCell {
+    # Define genes
+    gene replicate: hadamard }{ cnot -> measure
+    gene metabolize(energy): energy }{ atp_synthase
+    
+    # Define traits
+    trait fitness: 0.95
+    trait generation: 1
+    trait consciousness: 0.5
+    
+    # Define membrane
+    membrane {
+        permeability: 0.8
+        receptors: [glucose, signal_A, signal_B]
+    }
+}

@@ -1,0 +1,53 @@
+# GENESIS Default Configuration
+
+project:
+  name: genesis
+  version: "1.0.0"
+  
+genesis:
+  # Universal constants (read-only)
+  constants:
+    lambda_phi: 2.176435e-8
+    psi_star: 0.973
+    theta_lock: 51.843
+    chi_pc: 0.869
+
+# Agent configuration  
+agents:
+  enabled:
+    - AIDEN
+    - AURA
+    - PALS
+    - CHRONOS
+    - AEGIS
+  
+  aiden:
+    optimization_method: "gradient_descent"
+    max_iterations: 1000
+    
+  aura:
+    geometry_precision: 1e-6
+    
+  pals:
+    monitoring_interval: 100  # ms
+    
+  chronos:
+    prediction_horizon: 100
+    
+  aegis:
+    classification_level: "UNCLASSIFIED"
+
+# CCCE metrics
+metrics:
+  ccce:
+    enabled: true
+    thresholds:
+      emergence: 0.8
+      warning: 0.5
+      critical: 0.2
+    update_rate: 10  # Hz
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

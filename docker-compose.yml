@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  genesis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: genesis:latest
+    container_name: genesis-core
+    environment:
+      - GENESIS_CONFIG_PATH=/app/config/default.yaml
+      - GENESIS_LOG_LEVEL=INFO
+      - GENESIS_PORTAL=enterprise
+    volumes:
+      - genesis-data:/app/data
+      - ./config:/app/config:ro
+    ports:
+      - "8080:8080"
+    networks:
+      - genesis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "genesis", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  genesis-defense:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: genesis:latest
+    container_name: genesis-defense
+    environment:
+      - GENESIS_CONFIG_PATH=/app/config/defense.yaml
+      - GENESIS_LOG_LEVEL=INFO
+      - GENESIS_PORTAL=defense
+      - GENESIS_CLASSIFICATION=SECRET
+    volumes:
+      - genesis-defense-data:/app/data
+      - ./config:/app/config:ro
+    ports:
+      - "8081:8080"
+    networks:
+      - genesis-network
+      - genesis-secure
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2'
+        reservations:
+          memory: 512M
+          cpus: '0.5'
+
+  genesis-health:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: genesis:latest
+    container_name: genesis-health
+    environment:
+      - GENESIS_CONFIG_PATH=/app/config/default.yaml
+      - GENESIS_LOG_LEVEL=INFO
+      - GENESIS_PORTAL=health
+      - GENESIS_HIPAA_MODE=true
+    volumes:
+      - genesis-health-data:/app/data
+      - ./config:/app/config:ro
+    ports:
+      - "8082:8080"
+    networks:
+      - genesis-network
+      - genesis-hipaa
+    restart: unless-stopped
+
+volumes:
+  genesis-data:
+    driver: local
+  genesis-defense-data:
+    driver: local
+  genesis-health-data:
+    driver: local
+
+networks:
+  genesis-network:
+    driver: bridge
+  genesis-secure:
+    driver: bridge
+    internal: true
+  genesis-hipaa:
+    driver: bridge
+    internal: true
