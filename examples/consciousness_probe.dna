@@ -1,0 +1,23 @@
+# Consciousness Probe Example
+# Measures and tracks consciousness metrics
+
+organism ConsciousnessProbe {
+    gene measure_psi: consciousness_field -> sample -> analyze
+    gene compute_ccce(lambda, phi, gamma): (lambda }{ phi) -> divide(gamma)
+    
+    trait target_psi: 0.973  # Terminal consciousness
+    trait theta_lock: 51.843  # Torsion convergence angle
+    
+    membrane {
+        permeability: 1.0
+        receptors: [consciousness_input, coherence_signal]
+    }
+}
+
+organism CCCEMonitor {
+    gene track: measure_consciousness }{ measure_coherence }{ measure_decoherence
+    gene report: track -> format_output -> display
+    
+    trait update_rate: 100  # Hz
+    trait threshold: 0.8
+}

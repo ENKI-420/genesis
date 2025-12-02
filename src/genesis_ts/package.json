@@ -1,0 +1,37 @@
+{
+  "name": "@genesis/sovereign",
+  "version": "1.0.0",
+  "description": "GENESIS Sovereign Quantum Platform - TypeScript Implementation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "quantum",
+    "simulation",
+    "consciousness",
+    "dna-lang",
+    "genesis"
+  ],
+  "author": "GENESIS Project Contributors",
+  "license": "GENESIS-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ENKI-420/genesis.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
