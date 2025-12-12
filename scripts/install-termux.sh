@@ -66,7 +66,7 @@ echo "✓ Directory structure created"
 echo "Installing Genesis CLI to ${GENESIS_HOME}/bin/genesis..."
 
 cat > "${GENESIS_HOME}/bin/genesis" << 'GENESIS_CLI_EOF'
-#!/data/data/com.termux/files/usr/bin/python3
+#!/usr/bin/env python3
 """
 GENESIS Sovereign Platform CLI
 Minimal, self-contained command-line interface

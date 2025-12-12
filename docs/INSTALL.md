@@ -6,10 +6,19 @@ This guide provides instructions for installing the GENESIS Sovereign Platform o
 
 ### Linux/macOS/PC
 
+**Recommended: Download and inspect before running:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/ENKI-420/genesis/main/install.sh -o install.sh
+less install.sh  # Review the script
+chmod +x install.sh
+./install.sh
+```
+
 One-liner installation (when repository is publicly accessible):
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ENKI-420/genesis/main/install.sh | sh
 ```
+**⚠️ Security Note:** Piping remote scripts directly to shell executes code without inspection. Use the download-and-inspect method above for better security.
 
 **Local Installation** (if the remote URL is not available or you cloned the repository):
 ```bash
@@ -20,10 +29,19 @@ chmod +x install.sh
 
 ### Android/Termux
 
+**Recommended: Download and inspect before running:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/ENKI-420/genesis/main/scripts/install-termux.sh -o install-termux.sh
+less install-termux.sh  # Review the script
+chmod +x install-termux.sh
+./install-termux.sh
+```
+
 One-liner installation (when repository is publicly accessible):
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ENKI-420/genesis/main/scripts/install-termux.sh | sh
 ```
+**⚠️ Security Note:** Review scripts before executing. Use the download-and-inspect method above for better security.
 
 **Local Installation** (if the remote URL is not available):
 ```bash
