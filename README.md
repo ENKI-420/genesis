@@ -30,6 +30,42 @@ A comprehensive, AI-powered lead generation, qualification, and conversion track
 
 ## 🛠️ Installation
 
+### GENESIS Sovereign Platform
+
+For the GENESIS Sovereign Platform CLI and local installation, see the [detailed installation guide](docs/INSTALL.md).
+
+**Quick Start - Linux/macOS:**
+```bash
+# Clone and install locally
+git clone https://github.com/ENKI-420/genesis.git
+cd genesis
+chmod +x install.sh
+./install.sh
+```
+
+**Quick Start - Android/Termux:**
+```bash
+# Install on Termux
+git clone https://github.com/ENKI-420/genesis.git
+cd genesis
+chmod +x scripts/install-termux.sh
+./scripts/install-termux.sh
+```
+
+After installation, the `genesis` command will be available:
+```bash
+genesis init          # Initialize GENESIS configuration
+genesis status        # Show system status
+genesis portal        # Access portals (enterprise, defense, health, legal, darpa)
+genesis archive       # Archive management
+genesis ccce          # Continuous Compliance and Certification Engine
+genesis omega         # Ωmega Protocol access
+genesis prove         # Generate zero-knowledge proofs
+genesis help          # Show all commands
+```
+
+### Enterprise Acquisition System
+
 1. **Clone the repository**:
 ```bash
 git clone <repository-url>
